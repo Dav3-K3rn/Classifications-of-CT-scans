@@ -12,11 +12,17 @@ This project implements a complete deep learning pipeline for multi-class classi
 
 ## Project Structure
 ├── prepare_lung_dataset.py # Phase 0: Data preparation and preprocessing
+
 ├── training_lung_cnn.py # Phases 1-3: Model training and evaluation
+
 ├── interpretation.py # Phase 4: Comprehensive analysis and reporting
+
 ├── output_dataset/ # Processed dataset (generated)
+
 ├── raw_kaggle/ # Raw Kaggle dataset (generated)
+
 ├── extracted/ # Extracted files (generated)
+
 └── README.md # This file
 
 
@@ -34,8 +40,7 @@ The project uses the **LIDC-IDRI** dataset from Kaggle, containing:
 - Kaggle API credentials (for dataset download)
 
 ### Install Dependencies
-    bash
-pip install -r requirements.txt
+    pip install -r requirements.txt
 If requirements.txt is not available, install manually:
 
 pip install tensorflow matplotlib seaborn numpy pandas scikit-learn opencv-python pillow pydicom tqdm kaggle
