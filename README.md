@@ -38,7 +38,6 @@ The project uses the **LIDC-IDRI** dataset from Kaggle, containing:
 pip install -r requirements.txt
 If requirements.txt is not available, install manually:
 
-bash
 pip install tensorflow matplotlib seaborn numpy pandas scikit-learn opencv-python pillow pydicom tqdm kaggle
 Kaggle Setup
 Create a Kaggle account at https://www.kaggle.com
@@ -47,11 +46,12 @@ Go to Account → Create New API Token
 
 Place kaggle.json in ~/.kaggle/ (Linux/Mac) or C:\Users\<username>\.kaggle\ (Windows)
 
-Usage Instructions
-Step 1: Prepare Dataset
+## Usage Instructions
+### Step 1: Prepare Dataset
 
 python prepare_lung_dataset.py
-This will:
+
+## This will:
 
 Download the LIDC-IDRI dataset from Kaggle
 
@@ -61,22 +61,22 @@ Convert DICOM to PNG format
 
 Create a balanced dataset in output_dataset/
 
-Step 2: Train Model
+## Step 2: Train Model
 
 python training_lung_cnn.py
 This executes Phases 1-3:
 
-Phase 1: Baseline CNN development
+### Phase 1: Baseline CNN development
 
-Phase 2: Transfer learning with VGG16/ResNet50
+### Phase 2: Transfer learning with VGG16/ResNet50
 
-Phase 3: Comprehensive evaluation
+### Phase 3: Comprehensive evaluation
 
 Saves trained model to lung_cancer_cnn_enhanced.h5
 
 Saves evaluation results to training_results.json
 
-Step 3: Run Comprehensive Analysis
+## Step 3: Run Comprehensive Analysis
 
 python interpretation.py
 This executes Phase 4 analysis:
